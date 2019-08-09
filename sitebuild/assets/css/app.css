@@ -1,0 +1,451 @@
+
+:root {
+    --font-family-open: 'Open Sans', sans-serif;
+    --font-family-yellowtail: 'Yellowtail', cursive;
+    --font-family-cambo: 'Cambo', serif;
+
+    --white: #fff;
+    --black: #000;
+    --dark: #222;
+    --link: #2fb2eb;
+    --logo-small-text-color: #ebebeb;
+
+    --search-placeholder-text-color: #6b6b6b;
+    --search-border-color: rgba(138, 138, 138, 0.4);
+    --search-btn-bg-color: #3e3e3e;
+
+    --banner-h4-bg-color: #04203e;
+    --banner-h1-bg-color: var(--black);
+
+    /* Boxes */
+
+    --basic-box-bg-color: #f5f5f5;
+    --basic-box-title-color: var(--dark);
+    --basic-box-second-title-color: #313131;
+    --basic-box-lead-color: #727272;
+    --basic-box-btn-bg-color: #2e7fac;
+    --basic-box-btn-color: var(--white);
+
+    --box-hover-bg-color: var(--dark);
+    --box-btn-hover-bg-color: #f4f4f4;
+    --box-btn-hover-text-color: #3e3e3e;
+
+    --grey-box-bg-color: #afafaf;
+    --grey-box-color: #e6e6e6;
+}
+
+/* BASIC */
+
+body {
+    font-family: var(--font-family-cambo);
+}
+
+body.container-fluid {
+    background: url("../img/design/Layer 15.png");
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--link);;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link);;
+}
+
+
+
+
+/* HEADER */
+header {
+    background: url("../img/design/Layer 104.png");
+    min-height: 785px;
+    height: 100%;
+    z-index: 9999;
+}
+
+header ul {
+    margin: 0;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li:last-child {
+    position: relative;
+}
+
+header .overlay-image {
+    background: url("../img/design/Layer 117.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    max-height: 785px;
+    height: 100%;
+    top: 0;
+}
+header .overlay-image::after {
+    content:"";
+    height:6px;
+    width:100%;
+    background-image: url("../img/design/Layer 35 copy 3.png");
+    z-index: 99999;
+    position: absolute;
+    bottom: -7px;
+}
+
+header .overlay-image .overlay-text-container {
+    bottom: 16rem;
+    color: white;
+    z-index: 99999;
+    position: absolute;
+    right: 0;
+}
+
+header nav {
+    background: url("../img/design/Layer 15.png");
+    background-color: #1c1c1c;
+    z-index: 99999;
+    max-height: 185px;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+nav .nav-item .form-control {
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--search-border-color);
+    position: relative;
+    color: var(--white);
+
+}
+
+nav .nav-item .search-btn {
+    background-color: var(--search-btn-bg-color);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 15px;
+    position: relative;
+    font-weight: 700;
+}
+
+nav .nav-item .form-control::placeholder {
+    color: var(--search-placeholder-text-color);
+}
+
+header nav ul li a figure figcaption {
+    color: var(--logo-small-text-color);
+}
+
+
+
+/* OVERLAY - Banner */
+.overlay-image .banner-container-1 {
+    background-color: var(--banner-h1-bg-color);
+    opacity: 0.8;
+}
+
+.overlay-image .overlay-text-container h1 {
+    font-family: var(--font-family-cambo);
+    font-weight: 500;
+    font-size: 40.5px;
+    padding: 0.3rem 3rem;
+}
+
+.overlay-image .banner-container-2 {
+    background-color: var(--banner-h4-bg-color);
+    opacity: 0.8;
+    width: 70%;
+    top: -35px;
+    left: 30px;
+    position: relative;
+}
+
+.overlay-image .overlay-text-container h4 {
+    text-align: center;
+    margint-top: -8px;
+    position: relative;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: var(--font-family-cambo);
+    padding: 0.5rem 0;
+}
+
+
+
+
+
+
+
+main {
+    background: url("../img/design/Layer 15 copy.png");
+    z-index: 9999;
+    min-height: 540px;
+    height: 100%;
+}
+
+/* Cards */
+main .card {
+    background-color: var(--basic-box-bg-color);
+    min-height: 330px;
+    height: 100%;
+    z-index: 99999;
+    position: relative;
+    padding: 2rem;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+main .card.even{
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+main .card.odd {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+main .card:hover {
+    background-color: var(--box-hover-bg-color);
+}
+
+main .card.active {
+    background-color: var(--box-hover-bg-color);
+}
+
+main .card .card-header {
+    color: var(--basic-box-title-color);
+    text-align: center;
+    font-size: 50px;
+    font-family: var(--font-family-open);
+    font-weight: 900;
+}
+
+main .card h5 {
+    text-align: center;
+    color: var(--basic-box-second-title-color);
+    font-size: 23px;
+    font-family: var(--font-family-yellowtail);
+    font-weight: 300;
+    margin: 0;
+}
+
+main .card.active .card-header {
+    color: var(--white);
+}
+
+main .card.active h5 {
+    color: var(--white);
+}
+
+main .card:hover .card-header {
+    color: var(--white);
+}
+
+main .card:hover h5 {
+    color: var(--white);
+}
+
+main .card .card-body .card-text {
+    color: var(--basic-box-lead-color);
+}
+
+main .card .card-body .card-btn {
+    background-color: var(--basic-box-btn-bg-color);
+    color: var(--basic-box-btn-color);
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+
+main .card:hover .card-body .card-btn {
+    background-color: var(--box-btn-hover-bg-color);
+    color: var(--box-btn-hover-text-color);
+}
+
+main .card.active .card-body .card-btn {
+    background-color: var(--box-btn-hover-bg-color);
+    color: var(--box-btn-hover-text-color);
+}
+
+
+
+
+/* Grey box */
+
+main .grey-box {
+    margin-top: 3rem;
+    color: var(--grey-box-color);
+    background-color: var(--grey-box-bg-color);
+    padding: 20px;
+    border-radius: 15px;
+    opacity: 0.8;
+    z-index: 99999;
+    position: relative;
+}
+
+main .grey-box p {
+    font-family: var(--font-family-open);;
+}
+
+
+/* FOOTER */
+footer {
+    background: url("../img/design/Footer/Shape 1 copy 3.png");
+    min-height: 185px;
+    height: 100%;
+    z-index: 9999;
+}
+
+footer.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+footer::after {
+    content: "";
+    height: 6px;
+    width: 100%;
+    background-image: url("../img/design/Layer 35 copy 3.png");
+    z-index: 99999;
+    position: absolute;
+    margin-top: -7px;
+}
+
+
+
+
+
+
+/* Mobile-first CSS Media Queries Breakpoints */
+
+/*@media (min-width:320px) { !* smartphones, portrait iPhone, portrait 480x320 phones (Android) *! }*/
+
+@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */
+    header .overlay-image .overlay-text-container {
+        bottom: 13rem;
+        right: 0rem;
+    }
+}
+
+
+@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+    header nav ul li:last-child {
+        float: right;
+        top: -50px;
+        right: 50px;
+    }
+}
+
+
+@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+    .container {
+        width: 950px;
+    }
+
+    header .overlay-image .overlay-text-container {
+        bottom: 10.5rem;
+        right: 30.5rem;
+    }
+
+    nav .nav-item .form-control {
+        width: 237px;
+        top: -40px;
+        right: 20px;
+    }
+
+    nav .nav-item .search-btn {
+        top: -40px;
+        right: 20px;
+    }
+
+    main .grey-box p {
+        margin-left: 18rem;
+    }
+}
+
+@media (min-width:1920px) {
+    header .overlay-image .overlay-text-container {
+        top: 50%;
+        left: 40%;
+        position: relative;
+        width: 20%;
+    }
+}
+
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+    main .card {
+        margin-top: -100px;
+    }
+
+    main div.card.first::after {
+        content: "";
+        width: 100%;
+        height: 28px;
+        background-image: url("../img/design/Doboz1 - A - hover/Layer 66.png");
+        z-index: 99999;
+        position: absolute;
+        margin-top: -7px;
+        top: 338px;
+        left: 0;
+    }
+    main div.card.second::after {
+        content: "";
+        width: 100%;
+        height: 28px;
+        background-image: url("../img/design/Doboz2 - B/Layer 66 copy 2.png");
+        z-index: 99999;
+        position: absolute;
+        margin-top: -7px;
+        top: 338px;
+        left: 0;
+    }
+
+    main div.card.third::after {
+        content: "";
+        width: 100%;
+        height: 28px;
+        background-image: url("../img/design/Doboz3 - C/Layer 66 copy 3.png");
+        z-index: 99999;
+        position: absolute;
+        margin-top: -7px;
+        top: 338px;
+        left: 0;
+    }
+
+    main div.card.fourth::after {
+        content: "";
+        width: 100%;
+        height: 28px;
+        background-image: url("../img/design/Doboz4 - D/Layer 66 copy 4.png");
+        z-index: 99999;
+        position: absolute;
+        margin-top: -7px;
+        top: 338px;
+        left: 0;
+    }
+}
+@media (min-width:2500px) {
+    header .overlay-image {
+        max-height: 0;
+        height: 100%;
+    }
+
+    footer {
+        min-height: 0;
+        height: 100%;
+    }
+}
